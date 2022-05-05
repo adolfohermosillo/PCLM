@@ -146,14 +146,14 @@ function init() {
     var items = [
     {sentence : "EL ÁGUILA, LA LIEBRE Y EL ESCARABAJO",fable_id: 1, sent_id: 1},
     {sentence: "Estaba una liebre siendo perseguida por un águila, y viéndose perdida pidió ayuda a un escarabajo, suplicándole que le ayudara.", fable_id: 1, sent_id: 2},
-    {sentence: "Le pidió el escarabajo al águila que perdonara a su amiga.",fable_id: 1, sent_id: 3}]/*,
+    {sentence: "Le pidió el escarabajo al águila que perdonara a su amiga.",fable_id: 1, sent_id: 3},
     {sentence: "Pero el águila, despreciando la insignificancia del escarabajo, devoró a la liebre en su presencia.",fable_id: 1, sent_id: 4},
     {sentence: "Desde entonces, buscando vengarse, el escarabajo observaba los lugares donde el águila ponía sus huevos, y haciéndolos rodar, los tiraba a tierra. ",fable_id: 1, sent_id:5 },
     {sentence: "Viéndose el águila echada del lugar a donde quiera que fuera, recurrió a Zeus pidiéndole un lugar seguro para depositar sus huevos.",fable_id: 1, sent_id:6 },
     {sentence: "Le ofreció Zeus colocarlos en su regazo, pero el escarabajo, viendo la táctica escapatoria, hizo una bolita de estiércol, voló y la dejó caer sobre el regazo de Zeus.",fable_id: 1, sent_id:7 },
     {sentence: "Se levantó entonces Zeus para sacudirse aquella suciedad, y tiró por tierra los huevos sin darse cuenta.",fable_id: 1, sent_id:8  },
     {sentence: "Por eso desde entonces, las águilas no ponen huevos en la época en que salen a volar los escarabajos.",fable_id: 1, sent_id: 9},
-    {sentence: "Nunca desprecies lo que parece insignificante, pues no hay ser tan débil que no pueda alcanzarte.",fable_id: 1, sent_id:10 }]*/
+    {sentence: "Nunca desprecies lo que parece insignificante, pues no hay ser tan débil que no pueda alcanzarte.",fable_id: 1, sent_id:10 }]
 
 
 
