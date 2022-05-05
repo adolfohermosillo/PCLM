@@ -144,7 +144,7 @@ function init() {
   exp.catch_trials = [];
 
     var items = [
-    {sentence : "EL ÁGUILA, LA LIEBRE Y EL ESCARABAJO",fable_id: 1, sent_id: 1},
+    {sentence : "El águila, la liebre y el escarabajo",fable_id: 1, sent_id: 1},
     {sentence: "Estaba una liebre siendo perseguida por un águila, y viéndose perdida pidió ayuda a un escarabajo, suplicándole que le ayudara.", fable_id: 1, sent_id: 2},
     {sentence: "Le pidió el escarabajo al águila que perdonara a su amiga.",fable_id: 1, sent_id: 3},
     {sentence: "Pero el águila, despreciando la insignificancia del escarabajo, devoró a la liebre en su presencia.",fable_id: 1, sent_id: 4},
