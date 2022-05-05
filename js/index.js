@@ -127,6 +127,7 @@ function make_slides(f) {
           "subject_information" : exp.subj_data,
           "time_in_minutes" : (Date.now() - exp.startT)/60000
       };
+      var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exp.data));
 
       setTimeout(function() {proliferate.submit(exp.data);}, 1000);
 
