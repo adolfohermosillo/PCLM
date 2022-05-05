@@ -111,7 +111,7 @@ function make_slides(f) {
         language : $("#language").val(),
         asses : $('input[name="assess"]:checked').val(),
         problems: $("#problems").val(),
-        time_taken: $("#time_taken").val(),
+        improve: $("#improve").val(),
         name : $("#name").val(),
       };
       exp.go(); //use exp.go() if and only if there is no "present" data.
