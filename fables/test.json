@@ -1,0 +1,3 @@
+fables = {{sentence : "EL ÁGUILA, LA LIEBRE Y EL ESCARABAJO",fable_id: 1, sent_id: 1},
+{sentence: "Estaba una liebre siendo perseguida por un águila, y viéndose perdida pidió ayuda a un escarabajo, suplicándole que le ayudara.", fable_id: 1, sent_id: 2},
+{sentence: "Le pidió el escarabajo al águila que perdonara a su amiga.",fable_id: 1, sent_id: 3} }

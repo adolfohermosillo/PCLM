@@ -1,0 +1,158 @@
+
+<html>
+
+<head>
+	<title>Traducción</title>
+
+    <!--JS-->
+
+    <!-- external general utilities -->
+    <script src="shared/js/jquery-1.11.1.min.js"></script>
+    <script src="shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
+    <script src="shared/js/underscore-min.js"></script>
+    <!-- if you want to draw stuff: -->
+    <!-- <script src="shared/js/raphael-min.js"></script> -->
+
+    <!-- cocolab experiment logic -->
+    <script src="shared/js/exp-V2.js"></script>
+    <script src="shared/js/stream-V2.js"></script>
+
+
+   <!-- utilities to submit data to proliferate -->
+   <script src="https://proliferate.alps.science/static/js/proliferate.js"></script>
+
+    <!-- cocolab general utilities -->
+    <script src="shared/js/mmturkey.js "></script>
+    <script src="shared/js/browserCheck.js"></script>
+    <script src="shared/js/utils.js"></script>
+    <!-- if you want to draw cute creatures (depends on raphael): -->
+    <!-- <script src="shared/js/ecosystem.js"></script> -->
+
+    <!-- experiment specific helper functions -->
+    <!-- <script src="js/local-utils.js"></script> -->
+
+    <!--CSS-->
+    <link href="shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+    <link href="shared/css/cocolab-style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/local-style.css" rel="stylesheet" type="text/css"/>
+
+    <!-- experiment file -->
+    <script src="js/index.js"></script>
+
+
+
+
+</head>
+
+<body onload="init();">
+	<noscript>This task requires JavaScript.</noscript>
+
+	<div class="slide" id="i0" >
+		<p id="cocolab">Grupo de Trabajo para el Procesamiento Computacional de Lenguas Indígenas Mexicanas
+
+			<p id="instruct-text">Traducción de las fábulas de Esopo a lenguas indigenas de México</p>
+   		<p id="instruct-text">
+				En esta prueba de concepto estaremos probando un método para producir traducciones libres, segmentaciones morfologicas y glosados de las fábulas de Esopo. Haz click en el botón de abajo para continuar.
+			</p>
+   		<button id="start_button" type="button">Comenzar</button>
+  </div>
+
+	<!--Instruction slide-->
+	<div class="slide" id="instructions">
+		<center>
+  		<h3>Información general</h3>
+  		<p > Por favor escribe tu nombre: </p>
+			<textarea id="name" rows="1" cols="30"></textarea>
+			<br><br>
+
+			Selecciona tu idioma:
+		 <br> <br>
+			<select id='language'>
+					  <label> <option value="None">Selecciona un idioma</label>
+					  <label><option value="Popoluca">Popoluca</label>
+					  <label><option value="Tojolabal">Tojolaba</label>
+					  <label><option value="Zapoteco">Zapoteco del Valle</label>
+					  <label><option value="Zapoteco">Zapoteco de la Sierra</label>
+					  <label><option value="Totonaco">Totonaco</label>
+					  <label><option value="Purépecha">Purépecha</label>
+					  <label><option value="Mixteco">Mixteco</label>
+					  <label><option value="Nahuatl">Nahuatl</label>
+					  <label><option value="Pima">Pima</label>
+					  <label><option value="Yaqui">Yaqui</label>
+			 </select>
+
+			 <br> <br>
+  		<button onclick="_s.button()">Continuar</button>
+		</center>
+	</div>
+
+
+
+	<!--Diapositiva-->
+
+  	<div class="slide" id="one_slider">
+		<center>
+			<br><br>
+			Oración: En altas y bajas incluso el título
+
+			<br><br>
+    <div id="source_table" border="1pt" >	<p class="prompt"></p></div>
+		  <br><br>
+			<p>Completa los siguientes apartados en blanco :</p><br><br>
+			Traducción libre: Traduce la oración del español a tu lengua
+			<br><br>
+			<textarea cols="50" rows="5" id='translation'></textarea>
+			<br><br>
+			Segmentación morfológica palabra por palabra: Separa los morfemas de cada palabra que incluiste en la traducción.
+			<br><br>
+			<textarea cols="50" rows="5" id='morphology'></textarea>
+			<br><br>
+			Glosado: Identifica las categorías gramaticales que corresponden a cada morfema de tu lengua. Puedes ver una lista de reglas para hacer el glosado morfológico
+			 <a  target="_blank" href="https://www.eva.mpg.de/lingua/resources/glossing-rules.php">(aquí)</a>
+			<br><br>
+			<textarea cols="50" rows="5" id='gloss'></textarea>
+			<br><br>
+			<button onclick="_s.button()">Siguiente</button>
+			<br><br>
+     	<div class="err">¡Asegurate de haber completado por lo menos la traducción!</div>
+			<div class="err"> </div>
+
+
+		</center>
+		</div>
+
+		<!--Información posttraducción-->
+
+		<div class="slide"  id="subj_info">
+		    <div class="long_form">
+		      <div class="subj_info_title">Encuesta final</div>
+		      <p>¿Qué te pareció esta prueba de concepto?</p>
+		      <label><input type="radio"  name="assess" value="Buena"/>Buena</label>
+		      <label><input type="radio"  name="assess" value="Mala"/>Mala</label>
+		      <label><input type="radio"  name="assess" value="Indiferente"/>Sin comentarios</label>
+
+		      <p>¿Qué problemas encontraste?</p>
+		      <textarea id="problems" rows="2" cols="50"></textarea>
+
+		      <p>¿En cuánto tiempo terminaste esta fábula?</p>
+		      <textarea id="time_taken" rows="1" cols="10"></textarea>
+					<br><br>
+		      <button onclick="_s.submit()">Enviar</button>
+		    </div>
+		</div>
+
+	<div id="thanks" class="slide js" >
+	    <p  class="big">¡Muchas Gracias!</p>
+	</div>
+
+
+  	<div class="progress">
+    	<span>Progreso:</span>
+    	<div class="bar-wrapper">
+      	<div class="bar" width="0%">
+      	</div>
+    	</div>
+  	</div>
+
+</body>
+</html>
